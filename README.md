@@ -151,6 +151,28 @@ It is explicitly labeled a heuristic. The quantitative panel also computes
 portfolio volatility from a covariance matrix, historical daily VaR/CVaR, HHI
 concentration and component risk contribution.
 
+### Interpreting Beta
+
+Beta is a vendor-provided historical estimate of an asset's sensitivity to
+market movements. A value near `1.0` indicates market-like sensitivity, a
+value above `1.0` suggests amplified movement, and a value between `0` and `1`
+suggests lower sensitivity. A negative value can indicate movement in the
+opposite direction, but it should be interpreted cautiously.
+
+SignalLens requests FMP Beta data only when the user enables **Beta analysis**.
+The interface classifies values above `1.2` as high systematic risk, values
+above `0.8` as medium, and lower values as low. In the educational heuristic,
+the bounded Beta score contributes 30% and annualized volatility contributes
+70%. If Beta is disabled or unavailable, the asset score falls back to the
+volatility score; reports display Beta as `N/A`. Cash adds no market-risk
+contribution.
+
+Beta describes historical systematic sensitivity, not total risk, causality or
+a forecast. Its value can vary with the benchmark, observation window and data
+provider methodology, so it should be considered alongside drawdown,
+volatility, concentration, VaR/CVaR and risk contribution rather than used by
+itself.
+
 News sentiment stays on its native `[-1, +1]` scale and is not added to the
 risk score. A combined number would imply validation this project does not
 claim.
