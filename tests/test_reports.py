@@ -1,8 +1,8 @@
 import unittest
 from io import BytesIO
 
-from reportlab.lib import colors
 from pypdf import PdfReader
+from reportlab.lib import colors
 
 from portfolio_app.reports import _styles, portfolio_report_pdf
 
