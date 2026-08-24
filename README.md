@@ -142,6 +142,6 @@ reimplemented application, synthetic fixtures, documentation and tests.
 
 ## Copyright
 
-Copyright (c) 2026 KE SHANG-HONG. All rights reserved.
+Copyright (c) 2026 SignalLens Project. All rights reserved.
 
 This repository is published for portfolio review purposes only. No permission is granted to copy, modify, redistribute, or commercially use the source code.
