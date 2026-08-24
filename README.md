@@ -17,9 +17,19 @@ automated trading or investment-advice system.
 The workspace brings portfolio risk, investor profiling, news intelligence,
 ETF exposure and report export into one Traditional Chinese interface.
 
+### Integrated research workflow
+
+| Portfolio and cash configuration | News analysis controls |
+| --- | --- |
+| ![Integrated portfolio analysis configuration](docs/images/integrated-analysis-setup.png) | ![News analysis configuration](docs/images/news-analysis-setup.png) |
+
+### News intelligence
+
 | News sentiment dashboard | AI-assisted research summary |
 | --- | --- |
 | ![News sentiment dashboard](docs/images/sentiment-dashboard.png) | ![AI-assisted market sentiment summary](docs/images/ai-sentiment-summary.png) |
+
+### Report output
 
 ![Exported portfolio risk report](docs/images/portfolio-risk-report.png)
 
