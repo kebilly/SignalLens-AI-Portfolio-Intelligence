@@ -1,12 +1,21 @@
 import unittest
 from io import BytesIO
 
+from reportlab.lib import colors
 from pypdf import PdfReader
 
-from portfolio_app.reports import portfolio_report_pdf
+from portfolio_app.reports import _styles, portfolio_report_pdf
 
 
 class ReportTests(unittest.TestCase):
+    def test_report_palette_uses_high_contrast_text(self):
+        styles = _styles()
+        self.assertEqual(styles["body"].fontName, "NotoSansTCMedium")
+        self.assertEqual(styles["title"].textColor, colors.HexColor("#0B2430"))
+        self.assertEqual(styles["heading"].textColor, colors.HexColor("#0A4052"))
+        self.assertEqual(styles["body"].textColor, colors.HexColor("#050A0D"))
+        self.assertEqual(styles["small"].textColor, colors.HexColor("#10171B"))
+
     def test_portfolio_pdf_is_readable(self):
         profile = {
             "risk_profile": "Balanced",

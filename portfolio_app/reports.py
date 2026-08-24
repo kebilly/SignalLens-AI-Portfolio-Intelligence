@@ -23,53 +23,54 @@ from reportlab.platypus import (
 
 
 def _styles():
-    font_path = Path(__file__).resolve().parent.parent / "assets" / "fonts" / "NotoSansTC-VF.ttf"
-    if "NotoSansTC" not in pdfmetrics.getRegisteredFontNames():
-        pdfmetrics.registerFont(TTFont("NotoSansTC", str(font_path)))
+    font_path = Path(__file__).resolve().parent.parent / "assets" / "fonts" / "NotoSansTC-Medium.ttf"
+    if "NotoSansTCMedium" not in pdfmetrics.getRegisteredFontNames():
+        pdfmetrics.registerFont(TTFont("NotoSansTCMedium", str(font_path)))
     base = getSampleStyleSheet()
     return {
         "title": ParagraphStyle(
             "ChineseTitle",
             parent=base["Title"],
-            fontName="NotoSansTC",
+            fontName="NotoSansTCMedium",
             fontSize=18,
             leading=24,
             alignment=TA_CENTER,
-            textColor=colors.HexColor("#174A5B"),
+            textColor=colors.HexColor("#0B2430"),
         ),
         "heading": ParagraphStyle(
             "ChineseHeading",
             parent=base["Heading2"],
-            fontName="NotoSansTC",
+            fontName="NotoSansTCMedium",
             fontSize=12,
             leading=16,
-            textColor=colors.HexColor("#176B87"),
+            textColor=colors.HexColor("#0A4052"),
             spaceBefore=6,
             spaceAfter=4,
         ),
         "body": ParagraphStyle(
             "ChineseBody",
             parent=base["BodyText"],
-            fontName="NotoSansTC",
+            fontName="NotoSansTCMedium",
             fontSize=9.2,
             leading=14,
+            textColor=colors.HexColor("#050A0D"),
             spaceAfter=4,
         ),
         "small": ParagraphStyle(
             "ChineseSmall",
             parent=base["BodyText"],
-            fontName="NotoSansTC",
+            fontName="NotoSansTCMedium",
             fontSize=8,
             leading=11,
-            textColor=colors.HexColor("#52616B"),
+            textColor=colors.HexColor("#10171B"),
         ),
     }
 
 
 def _footer(canvas, doc):
     canvas.saveState()
-    canvas.setFont("NotoSansTC", 8)
-    canvas.setFillColor(colors.HexColor("#667780"))
+    canvas.setFont("NotoSansTCMedium", 8)
+    canvas.setFillColor(colors.HexColor("#2B3439"))
     canvas.drawString(18 * mm, 12 * mm, "SignalLens - Portfolio Risk Research")
     canvas.drawRightString(192 * mm, 12 * mm, f"第 {doc.page} 頁")
     canvas.restoreState()
@@ -168,8 +169,8 @@ def _table(data, widths):
         TableStyle(
             [
                 ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#DCECEF")),
-                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#174A5B")),
-                ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#AABBC1")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#0B2430")),
+                ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#5D707A")),
                 ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                 ("LEFTPADDING", (0, 0), (-1, -1), 4),
                 ("RIGHTPADDING", (0, 0), (-1, -1), 4),
