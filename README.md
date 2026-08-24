@@ -140,7 +140,8 @@ Course PDFs, instructor source code, real API keys, generated reports and large
 temporary datasets are intentionally excluded. The repository contains the
 reimplemented application, synthetic fixtures, documentation and tests.
 
-## License
+## Copyright
 
-Application source code uses the [MIT License](LICENSE). The bundled Noto font
-retains its upstream license; see [third-party notices](THIRD_PARTY_NOTICES.md).
+Copyright (c) 2026 KE SHANG-HONG. All rights reserved.
+
+This repository is published for portfolio review purposes only. No permission is granted to copy, modify, redistribute, or commercially use the source code.
