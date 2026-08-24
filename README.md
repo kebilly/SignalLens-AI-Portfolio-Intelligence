@@ -3,11 +3,30 @@
 ![CI checks](https://img.shields.io/badge/CI-tests%20%7C%20lint%20%7C%20types-brightgreen)
 ![Core coverage](https://img.shields.io/badge/core%20coverage-%E2%89%A570%25-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://signallens-ai-portfolio.streamlit.app/)
 
 SignalLens is a Streamlit research application that combines explainable
 portfolio-risk diagnostics, news sentiment, ETF exposure comparison and
 user-supplied product alerts. It is an engineering portfolio project, not an
 automated trading or investment-advice system.
+
+## Product preview
+
+[![SignalLens research workspace](docs/images/overview.png)](https://signallens-ai-portfolio.streamlit.app/)
+
+The workspace brings portfolio risk, investor profiling, news intelligence,
+ETF exposure and report export into one Traditional Chinese interface.
+
+| News sentiment dashboard | AI-assisted research summary |
+| --- | --- |
+| ![News sentiment dashboard](docs/images/sentiment-dashboard.png) | ![AI-assisted market sentiment summary](docs/images/ai-sentiment-summary.png) |
+
+![Exported portfolio risk report](docs/images/portfolio-risk-report.png)
+
+The public [Live Demo](https://signallens-ai-portfolio.streamlit.app/) defaults
+to offline data so visitors can explore the workflow without exposing API
+credentials or consuming external-service quotas. The screenshots above show
+the corresponding live-provider analysis and exported PDF workflow.
 
 ## Why this project exists
 
